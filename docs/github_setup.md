@@ -7,7 +7,7 @@
 建议仓库名：
 
 ```text
-dialogue-resonance-curve
+TokenWave
 ```
 
 创建时建议：
@@ -67,13 +67,13 @@ git commit -m "Initial research repository"
 把 URL 换成你自己的 GitHub 仓库地址：
 
 ```bash
-git remote add origin git@github.com:<your-name>/dialogue-resonance-curve.git
+git remote add origin git@github.com:<your-name>/TokenWave.git
 ```
 
 如果你用 HTTPS：
 
 ```bash
-git remote add origin https://github.com/<your-name>/dialogue-resonance-curve.git
+git remote add origin https://github.com/<your-name>/TokenWave.git
 ```
 
 ## 6. 上传

@@ -1,8 +1,8 @@
-# Dialogue Resonance Curve
+# TokenWave
 
-![Dialogue Resonance Curve header](assets/dialogue_resonance_header.png)
+![TokenWave header](assets/tokenwave_header.png)
 
-对话谐振曲线是一个关于多轮 LLM 编码任务的探索性研究项目。核心问题是：能否把一段任务对话看成多通道时间序列，并用波形基、前缀预测和在线状态特征来估计对话进度与用户可感知的等待体验。
+TokenWave 是一个关于多轮 LLM 编码任务的探索性研究项目。核心问题是：能否把一段任务对话看成多通道 token 时间序列，并用波形基、前缀预测和在线状态特征来估计对话进度与用户可感知的等待体验。
 
 本仓库整理的是科研实验本身，不是 Codex 桌宠插件仓库。桌宠只是一个应用场景，相关接口草案放在 `docs/application/`。
 
@@ -15,7 +15,7 @@
 3. 对话状态不一定是规则单峰，但可以通过多通道时间序列、非负波形基和在线特征捕捉。
 4. 对桌宠等实时应用来说，最有用的目标不是精确剩余轮数，而是当前等待体验：当前是否长输出、是否红温调试、是否稳定推进、是否收束。
 
-![Dialogue waveform hypothesis](assets/dialogue_waveform_hypothesis.png)
+![TokenWave hypothesis](assets/tokenwave_hypothesis.png)
 
 ## Data
 
@@ -228,5 +228,5 @@ outputs/
 如果复用本仓库，建议引用为：
 
 ```text
-Dialogue Resonance Curve: waveform and online-state modeling for multi-turn coding dialogues.
+TokenWave: waveform and online-state modeling for multi-turn coding dialogues.
 ```

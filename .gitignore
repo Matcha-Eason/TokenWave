@@ -1,0 +1,33 @@
+# OS / editor
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+
+# Local plotting/cache
+.matplotlib/
+
+# Raw data and generated full outputs
+data/
+outputs/
+*.parquet
+
+# Local logs
+*.log
+nohup.out
+
+# Application/plugin artifacts kept out of the research repo
+plugins/
+dist/
+.agents/
+.github/
+
+# Large archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz

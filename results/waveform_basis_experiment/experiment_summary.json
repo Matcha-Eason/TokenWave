@@ -1,0 +1,451 @@
+{
+  "input": "outputs/coderforge_full/turn_timeseries.parquet",
+  "trajectories_used": 30000,
+  "train_trajectories": 22500,
+  "test_trajectories": 7500,
+  "points": 64,
+  "components": 8,
+  "main_channels": [
+    {
+      "field": "assistant_tokens",
+      "zh": "模型输出波"
+    },
+    {
+      "field": "thinking_tokens_est",
+      "zh": "思考规划波"
+    },
+    {
+      "field": "user_tokens_est",
+      "zh": "环境反馈波"
+    }
+  ],
+  "event_channels_not_in_basis": [
+    {
+      "field": "edit_count",
+      "zh": "编辑事件"
+    },
+    {
+      "field": "test_count",
+      "zh": "测试事件"
+    },
+    {
+      "field": "error_feedback_count",
+      "zh": "错误反馈事件"
+    },
+    {
+      "field": "finish_call_count",
+      "zh": "结束事件"
+    }
+  ],
+  "full_reconstruction_test_normalized_mse": 0.3043273396153463,
+  "full_reconstruction_test_r2": 0.10049984358635251,
+  "prefix_prediction": [
+    {
+      "task": "future_curve_prediction_unsupervised_nmf",
+      "split": "test",
+      "prefix_ratio": 0.25,
+      "mse": 0.12445492558937962,
+      "mae": 0.18033872505593107,
+      "normalized_mse": 0.7517357311366014,
+      "r2": -0.30194251454874865
+    },
+    {
+      "task": "future_curve_prediction_mean_template",
+      "split": "test",
+      "prefix_ratio": 0.25,
+      "mse": 0.07538742018973596,
+      "mae": 0.15080968167379866,
+      "normalized_mse": 0.4553569669216002,
+      "r2": -0.00017336760482463778
+    },
+    {
+      "task": "future_curve_prediction_prefix_ridge_nmf",
+      "split": "test",
+      "prefix_ratio": 0.25,
+      "mse": 0.07483799610639302,
+      "mae": 0.15290535993210733,
+      "normalized_mse": 0.4520383219339477,
+      "r2": 0.009109630462210496
+    },
+    {
+      "task": "future_curve_prediction_unsupervised_nmf",
+      "split": "test",
+      "prefix_ratio": 0.5,
+      "mse": 0.07454073490295068,
+      "mae": 0.15488370237278407,
+      "normalized_mse": 0.47472417218842544,
+      "r2": -0.13919733967671835
+    },
+    {
+      "task": "future_curve_prediction_mean_template",
+      "split": "test",
+      "prefix_ratio": 0.5,
+      "mse": 0.05694355536426798,
+      "mae": 0.14294183578274544,
+      "normalized_mse": 0.36265381897513077,
+      "r2": -0.0002024439413488959
+    },
+    {
+      "task": "future_curve_prediction_prefix_ridge_nmf",
+      "split": "test",
+      "prefix_ratio": 0.5,
+      "mse": 0.05536796263177048,
+      "mae": 0.14223812771858543,
+      "normalized_mse": 0.35261941353742204,
+      "r2": 0.012629583624063266
+    },
+    {
+      "task": "future_curve_prediction_unsupervised_nmf",
+      "split": "test",
+      "prefix_ratio": 0.75,
+      "mse": 0.05296260661306825,
+      "mae": 0.14127717801673195,
+      "normalized_mse": 0.3450158691514042,
+      "r2": -0.047417370154096035
+    },
+    {
+      "task": "future_curve_prediction_mean_template",
+      "split": "test",
+      "prefix_ratio": 0.75,
+      "mse": 0.04824986688073593,
+      "mae": 0.1414805290597819,
+      "normalized_mse": 0.3143155298211683,
+      "r2": -0.00025665664939484206
+    },
+    {
+      "task": "future_curve_prediction_prefix_ridge_nmf",
+      "split": "test",
+      "prefix_ratio": 0.75,
+      "mse": 0.04890075958440281,
+      "mae": 0.14050592214760566,
+      "normalized_mse": 0.31855565934350427,
+      "r2": -0.0038524894568117696
+    }
+  ],
+  "future_peak_prediction": [
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.25,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.542,
+      "majority_accuracy": 0.542,
+      "accuracy": 0.5152,
+      "precision": 0.5922580645161291,
+      "recall": 0.33874538745387456,
+      "f1": 0.4309859154929577
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.25,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.542,
+      "majority_accuracy": 0.542,
+      "accuracy": 0.462,
+      "precision": 0.8571428571428571,
+      "recall": 0.008856088560885609,
+      "f1": 0.017531044558071585
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.25,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.542,
+      "majority_accuracy": 0.542,
+      "accuracy": 0.458,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.25,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.06666666666666667,
+      "majority_accuracy": 0.9333333333333333,
+      "accuracy": 0.6853333333333333,
+      "precision": 0.11665292662819456,
+      "recall": 0.566,
+      "f1": 0.19343814080656183
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.25,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.06666666666666667,
+      "majority_accuracy": 0.9333333333333333,
+      "accuracy": 0.9305333333333333,
+      "precision": 0.24390243902439024,
+      "recall": 0.02,
+      "f1": 0.03696857670979667
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.25,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.06666666666666667,
+      "majority_accuracy": 0.9333333333333333,
+      "accuracy": 0.9333333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.25,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.1368,
+      "majority_accuracy": 0.8632,
+      "accuracy": 0.8609333333333333,
+      "precision": 0.13043478260869565,
+      "recall": 0.0029239766081871343,
+      "f1": 0.005719733079122974
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.25,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.1368,
+      "majority_accuracy": 0.8632,
+      "accuracy": 0.8632,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.25,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.1368,
+      "majority_accuracy": 0.8632,
+      "accuracy": 0.8632,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.5,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.16786666666666666,
+      "majority_accuracy": 0.8321333333333334,
+      "accuracy": 0.7981333333333334,
+      "precision": 0.102803738317757,
+      "recall": 0.026211278792692614,
+      "f1": 0.04177215189873418
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.5,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.16786666666666666,
+      "majority_accuracy": 0.8321333333333334,
+      "accuracy": 0.8276,
+      "precision": 0.05263157894736842,
+      "recall": 0.0015885623510722795,
+      "f1": 0.0030840400925212026
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.5,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.16786666666666666,
+      "majority_accuracy": 0.8321333333333334,
+      "accuracy": 0.8321333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.5,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.015866666666666668,
+      "majority_accuracy": 0.9841333333333333,
+      "accuracy": 0.8777333333333334,
+      "precision": 0.025,
+      "recall": 0.17647058823529413,
+      "f1": 0.04379562043795621
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.5,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.015866666666666668,
+      "majority_accuracy": 0.9841333333333333,
+      "accuracy": 0.9841333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.5,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.015866666666666668,
+      "majority_accuracy": 0.9841333333333333,
+      "accuracy": 0.9841333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.5,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.06,
+      "majority_accuracy": 0.94,
+      "accuracy": 0.9365333333333333,
+      "precision": 0.03571428571428571,
+      "recall": 0.0022222222222222222,
+      "f1": 0.004184100418410042
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.5,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.06,
+      "majority_accuracy": 0.94,
+      "accuracy": 0.94,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.5,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.06,
+      "majority_accuracy": 0.94,
+      "accuracy": 0.94,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.75,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.01,
+      "majority_accuracy": 0.99,
+      "accuracy": 0.9865333333333334,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.75,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.01,
+      "majority_accuracy": 0.99,
+      "accuracy": 0.9849333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.75,
+      "channel": "assistant_tokens",
+      "channel_zh": "模型输出波",
+      "positive_rate": 0.01,
+      "majority_accuracy": 0.99,
+      "accuracy": 0.99,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.75,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.0009333333333333333,
+      "majority_accuracy": 0.9990666666666667,
+      "accuracy": 0.9990666666666667,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.75,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.0009333333333333333,
+      "majority_accuracy": 0.9990666666666667,
+      "accuracy": 0.9990666666666667,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.75,
+      "channel": "thinking_tokens_est",
+      "channel_zh": "思考规划波",
+      "positive_rate": 0.0009333333333333333,
+      "majority_accuracy": 0.9990666666666667,
+      "accuracy": 0.9990666666666667,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "unsupervised_nmf_prefix_fit",
+      "prefix_ratio": 0.75,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.0228,
+      "majority_accuracy": 0.9772,
+      "accuracy": 0.9756,
+      "precision": 0.125,
+      "recall": 0.011695906432748537,
+      "f1": 0.0213903743315508
+    },
+    {
+      "model": "prefix_ridge_to_nmf",
+      "prefix_ratio": 0.75,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.0228,
+      "majority_accuracy": 0.9772,
+      "accuracy": 0.9769333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "model": "mean_template",
+      "prefix_ratio": 0.75,
+      "channel": "user_tokens_est",
+      "channel_zh": "环境反馈波",
+      "positive_rate": 0.0228,
+      "majority_accuracy": 0.9772,
+      "accuracy": 0.9772,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  ]
+}

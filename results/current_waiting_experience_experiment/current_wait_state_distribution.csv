@@ -1,0 +1,6 @@
+state,count,state_zh,rate
+overheat_debugging,72395,红温调试,0.40219444444444447
+steady_work,38655,稳定工作,0.21475
+deep_output,33175,深度输出,0.18430555555555556
+reading_understanding,23430,读题理解,0.13016666666666668
+closing,12345,收束,0.06858333333333333

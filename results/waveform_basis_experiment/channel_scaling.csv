@@ -1,0 +1,4 @@
+channel,channel_zh,log1p_p75_scale
+assistant_tokens,模型输出波,5.462889741837708
+thinking_tokens_est,思考规划波,1.0
+user_tokens_est,环境反馈波,6.643789733147672

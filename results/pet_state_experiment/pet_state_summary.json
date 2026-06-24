@@ -1,0 +1,53 @@
+{
+  "examples": 120000,
+  "trajectories": 9231,
+  "train_examples": 89996,
+  "test_examples": 30004,
+  "features": 52,
+  "state_labels": {
+    "reading_understanding": "读题理解",
+    "steady_work": "稳定工作",
+    "deep_output": "深度输出",
+    "overheat_debugging": "红温调试",
+    "closing": "收束"
+  },
+  "metrics": [
+    {
+      "task": "remaining_turns_regression",
+      "mae_turns": 10.832552510047,
+      "median_abs_error_turns": 7.395582327967658,
+      "r2_log_remaining": 0.7547642297831801
+    },
+    {
+      "task": "future_end_within_5",
+      "positive_rate": 0.10105319290761232,
+      "accuracy": 0.952306359152113,
+      "balanced_accuracy": 0.8396903932818829,
+      "f1": 0.7474854420328216,
+      "auc": 0.9787148316029483
+    },
+    {
+      "task": "future_long_output_3",
+      "positive_rate": 0.41851086521797093,
+      "accuracy": 0.7786961738434875,
+      "balanced_accuracy": 0.7830365134687778,
+      "f1": 0.7538370282494253,
+      "auc": 0.8606458680930574
+    },
+    {
+      "task": "future_overheat_5",
+      "positive_rate": 0.5226636448473537,
+      "accuracy": 0.6535795227303026,
+      "balanced_accuracy": 0.6506954989599978,
+      "f1": 0.6830904323434356,
+      "auc": 0.7165099900175248
+    },
+    {
+      "task": "pet_state_multiclass",
+      "accuracy": 0.9474736701773097,
+      "balanced_accuracy": 0.9398688233716234,
+      "macro_f1": 0.9225446180707163,
+      "weighted_f1": 0.9506104222317545
+    }
+  ]
+}
